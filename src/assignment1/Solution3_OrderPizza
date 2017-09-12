@@ -38,28 +38,28 @@ Objects:
 
 
 
-	class Consumer
-		String name,
-		Address address,
-		String phone,
-		String email,
-		CreditCard creditCard,
+    class Consumer
+        String name,
+        Address address,
+        String phone,
+        String email,
+        CreditCard creditCard,
 
-		List<Pizza> searchPizza(PizzaCriteria pizzaCriteria),
-		void placeOrder(Order order),
-		boolean makePayment(CreditCard creditCard),
-		void reviewOrder(String comment),
-		boolean cancelOrder(Order order),
-	end
+        List<Pizza> searchPizza(PizzaCriteria pizzaCriteria),
+        void placeOrder(Order order),
+        boolean makePayment(CreditCard creditCard),
+        void reviewOrder(String comment),
+        boolean cancelOrder(Order order),
+    end
 
-	class PizzaHutWebsite
+    class PizzaHutWebsite
         String urlOfPizzaHut,
         Collection pizzas,
 
         List<Pizza> sort(double price),
         List<Pizza> display(),
         boolean confirmOrder(Order order),
-	end
+    end
 
 	class Pizza
 	    String pizzaName,
@@ -88,30 +88,30 @@ Objects:
 	    double applyDiscount(double percentageOfDiscount),
 	end
 
-	class CreditCard
-	    String cardHolderName,
+    class CreditCard
+        String cardHolderName,
         String cardNumber,
         String CreditCardCompany,
-	end
+    end
 
 	class CreditCardCompany
 	    boolean authorizeTransaction(CreditCard creditCard),
 	end
 
-	class OderPizza
-	    main
-	        Consumer alexis,
-	        PizzaHutWebsite pizzaHutWebsite,
-	        Pizza hawaiian,
-	        PizzaCriteria myFavoritePizza,
-	        Order myOrder,
-	        Coupon myCoupon,
-	        CreditCard myCard,
-	        CreditCardCompany visa,
+    class OderPizza
+        main
+            Consumer alexis,
+            PizzaHutWebsite pizzaHutWebsite,
+            Pizza hawaiian,
+            PizzaCriteria myFavoritePizza,
+            Order myOrder,
+            Coupon myCoupon,
+            CreditCard myCard,
+            CreditCardCompany visa,
 
-	        alexis.searchPizza(myFavoritePizza),
-	            return List<Pizza>
-	        pizzaHutWebsite.display(),
+            alexis.searchPizza(myFavoritePizza),
+                return List<Pizza>
+            pizzaHutWebsite.display(),
                 return List<pizza>
             pizzaHutWebsite.sort(price),
                 return List<pizza>,
@@ -123,7 +123,7 @@ Objects:
                 alexis.makePayment(myCard),
             end
             alexis.reviewOrder(comment),
-	    end
-	end
+        end
+    end
 
 
