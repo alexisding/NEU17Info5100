@@ -61,32 +61,32 @@ Objects:
         boolean confirmOrder(Order order),
     end
 
-	class Pizza
-	    String pizzaName,
-	    String pizzaTopping,
-	    double size,
-	    double price,
-	end
+    class Pizza
+        String pizzaName,
+        String pizzaTopping,
+        double size,
+        double price,
+    end
 
-	class PizzaCriteria
-	    String desirableTopping,
-	    double desirableSize,
-	end
+    class PizzaCriteria
+        String desirableTopping,
+        double desirableSize,
+    end
 
-	class Order
-	    List<Pizza> orderedProducts,
-	    Address deliveryAddress,
-	    double totalPrice,
-	    Date date
-	end
+    class Order
+        List<Pizza> orderedProducts,
+        Address deliveryAddress,
+        double totalPrice,
+        Date date
+    end
 
-	class Coupon
-	    double percentageOfDiscount,
-	    boolean isQualifiedForApplyingCoupon,
+    class Coupon
+        double percentageOfDiscount,
+        boolean isQualifiedForApplyingCoupon,
 
-	    boolean isQualified(boolean isQualifiedForApplyingCoupon),
-	    double applyDiscount(double percentageOfDiscount),
-	end
+        boolean isQualified(boolean isQualifiedForApplyingCoupon),
+        double applyDiscount(double percentageOfDiscount),
+    end
 
     class CreditCard
         String cardHolderName,
