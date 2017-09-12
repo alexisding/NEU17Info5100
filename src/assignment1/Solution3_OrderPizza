@@ -94,9 +94,9 @@ Objects:
         String CreditCardCompany,
     end
 
-	class CreditCardCompany
-	    boolean authorizeTransaction(CreditCard creditCard),
-	end
+    class CreditCardCompany
+        boolean authorizeTransaction(CreditCard creditCard),
+    end
 
     class OderPizza
         main
@@ -116,7 +116,7 @@ Objects:
             pizzaHutWebsite.sort(price),
                 return List<pizza>,
             if myCoupon.isQualified(isQualifiedForApplyingCoupon)
-                myCoupon.applyDiscount(percentageOfDiscount)
+                myCoupon.applyDiscount(percentageOfDiscount),
             end
             alexis.placeOrder(myOrder),
             if visa.authorizeTransaction(myCard)
