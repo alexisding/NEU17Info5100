@@ -1,0 +1,129 @@
+3. Order Pizza from Pizza Hut (online)
+
+Objects and Behaviors:
+
+Objects:
+
+	Consumer:
+		Data: Name, Address, Phone, Email, CreditCard
+		Behaviors: search, place order, make payment, review, cancel
+
+	PizzaHutWebsite:
+		Data: URL of PizzaHut, Collection of pizzas, Collection of wings, Collection of sides, Collection of drinks
+		Behaviors: sort, display, confirm order
+
+	Pizza:
+		Data: Name, Toppings, Size, Price
+		Behaviors:
+
+	PizzaCriteria:
+		Data: Desirable toppings, Desirable size
+		Behaviors:
+
+	Order:
+		Data: List of ordered products, Delivery address, Total price, Date
+		Behaviors:
+
+	Coupon:
+		Data: Percentage of discount, Qualification for applying coupon
+		Behaviors: apply discount
+
+	CreditCard:
+		Data: Cardholder name, Card number, CreditCard company, Expiry dates, Security code, Cardholder address, Zipcode
+		Behaviors:
+
+	CreditCardCompany:
+		Data:
+		Behaviors: authorize transaction
+
+
+
+	class Consumer
+		String name,
+		Address address,
+		String phone,
+		String email,
+		CreditCard creditCard,
+
+		List<Pizza> searchPizza(PizzaCriteria pizzaCriteria),
+		void placeOrder(Order order),
+		boolean makePayment(CreditCard creditCard),
+		void reviewOrder(String comment),
+		boolean cancelOrder(Order order),
+	end
+
+	class PizzaHutWebsite
+        String urlOfPizzaHut,
+        Collection pizzas,
+
+        List<Pizza> sort(double price),
+        List<Pizza> display(),
+        boolean confirmOrder(Order order),
+	end
+
+	class Pizza
+	    String pizzaName,
+	    String pizzaTopping,
+	    double size,
+	    double price,
+	end
+
+	class PizzaCriteria
+	    String desirableTopping,
+	    double desirableSize,
+	end
+
+	class Order
+	    List<Pizza> orderedProducts,
+	    Address deliveryAddress,
+	    double totalPrice,
+	    Date date
+	end
+
+	class Coupon
+	    double percentageOfDiscount,
+	    boolean isQualifiedForApplyingCoupon,
+
+	    boolean isQualified(boolean isQualifiedForApplyingCoupon),
+	    double applyDiscount(double percentageOfDiscount),
+	end
+
+	class CreditCard
+	    String cardHolderName,
+        String cardNumber,
+        String CreditCardCompany,
+	end
+
+	class CreditCardCompany
+	    boolean authorizeTransaction(CreditCard creditCard),
+	end
+
+	class OderPizza
+	    main
+	        Consumer alexis,
+	        PizzaHutWebsite pizzaHutWebsite,
+	        Pizza hawaiian,
+	        PizzaCriteria myFavoritePizza,
+	        Order myOrder,
+	        Coupon myCoupon,
+	        CreditCard myCard,
+	        CreditCardCompany visa,
+
+	        alexis.searchPizza(myFavoritePizza),
+	            return List<Pizza>
+	        pizzaHutWebsite.display(),
+                return List<pizza>
+            pizzaHutWebsite.sort(price),
+                return List<pizza>,
+            if myCoupon.isQualified(isQualifiedForApplyingCoupon)
+                myCoupon.applyDiscount(percentageOfDiscount)
+            end
+            alexis.placeOrder(myOrder),
+            if visa.authorizeTransaction(myCard)
+                alexis.makePayment(myCard),
+            end
+            alexis.reviewOrder(comment),
+	    end
+	end
+
+
