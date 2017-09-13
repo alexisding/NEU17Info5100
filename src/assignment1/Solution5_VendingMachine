@@ -1,0 +1,116 @@
+5. Soft-drink Vending Machine
+    5.1 Swipe credit card
+    5.2 Vending machine record credit card information
+    5.3 Bank authorize credit card transaction
+    5.4 Choose position number, press OK to confirm
+    5.5 Vending machine deliver drink
+    5.6 Repeat 5.3 and 5.4 if want more drinks
+    5.7 After getting all desired drinks, press END to finish
+    5.8 Vending machine display total price
+
+
+
+Objects:
+
+    Consumer:
+        Data: Name
+        Behaviors: swipe credit card, choose position number, press OK, press END
+
+    SoftDrink:
+        Data: Name, Price, Size, Position number
+        Behaviors:
+
+    VendingMachine:
+        Data: Collection of drinks, Collection of position numbers, Collection of drink price
+        Behaviors: display, record credit card info, deliver drinks, display total price
+
+    Order:
+        Data: List of ordered drinks, total price
+        Behaviors:
+
+    CreditCard:
+        Data: Cardholder name, Card number, CreditCard company, Expiry dates, Security code, Cardholder address, Zipcode
+        Behaviors:
+
+    CreditCardCompany:
+        Data:
+        Behaviors: authorize transaction
+
+
+
+    class Consumer
+        String name,
+
+        void swipeCreditCard(CreditCard creditCard),
+        String choosePositionNum(int positionNumber),
+        void pressOk(),
+        void pressEnd(),
+    end
+
+    class SoftDrink
+        String drinkName,
+        double drinkPrice,
+        String drinkPrice,
+        int positionNumber,
+    end
+
+    class VendingMachine
+        List<SoftDrink> softDrinks,
+        List<PositionNumber> positionNumbers,
+        List<Price> price,
+
+        List<SoftDrink> displayDrinks(),
+        List<PositionNumber> displayPositionNums(),
+        List<Price> displayPrice(),
+        boolean recordCreditCardInfo(CreditCard),
+        double deliverDrink(int positionNumber),
+        double displayTotalPrice(Order order),
+    end
+
+    class Order
+        List<OrderedDrink> orderedDrink,
+        double totalPrice,
+    end
+
+    class CreditCard
+        String cardHolderName,
+        String cardNumber,
+        String CreditCardCompany,
+    end
+
+    class CreditCardCompany
+        boolean authorizeTransaction(CreditCard creditCard),
+    end
+
+    class VendingMachine
+        main
+            Consumer alexis,
+            SoftDrink coke, sprit, fanta -> List<SoftDrink> drinks
+            VendingMachine machine,
+            Order myOder,
+            CreditCard myCard,
+            CreditCardCompany visa,
+
+            machine.displayDrink(),
+                return drinks
+            machine.displayPositionNum(),
+                return List<PositionNumber>
+            machine.displayPrice(),
+                return List<Price>
+            alexis.swipeCreditCard(myCard),
+            if machine.recordCreditCardInfo(myCard),
+                if visa.authorizeTransaction(myCard),
+                    loop
+                        alexis.choosePositionNum(positionNumber),
+                            return drink
+                        alexis.pressOk(),
+                        machine.deliverDrink(positionNumber),
+                            return price
+                    end
+                    alexis.pressEnd(),
+                    machine.displayTotalPrice(myOrder),
+                        return totalPrice
+                end
+            end
+        end
+    end
