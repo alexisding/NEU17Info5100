@@ -1,0 +1,198 @@
+1. Hiking (driving own car)
+    1.1 Book a hotel on Booking.com
+    1.2 Fill in gas on the way
+    1.3 Have lunch in a restaurant
+    1.4 Buy park tickets
+    1.5 Check in the hotel
+    1.6 Go hiking
+
+
+Objects:
+
+    Driver:
+        Data: Name, Driver's license number
+        Behaviors: drive, buy park tickets
+
+    Visitor:
+        Data: Name
+        Behaviors: search, make payment, make reservation, have lunch, check in, review, go hiking, check out
+
+    BookingWebsite:
+        Data: URL of Booking, Collection of hotels
+        Behaviors: sort, display, compare
+
+    Hotel:
+        Data: Room type, Price, Location, Reviews
+        Behaviors:
+
+    HotelCriteria:
+        Data: Desirable location, Good reviews
+        Behavior:
+
+    Reservation:
+        Data:  Guest name, Number of guests, Number of rooms, Name of reserved hotel, Total price, Check-in and Check-out date
+        Behaviors:
+
+    CreditCard:
+        Data: Cardholder name, Card number, CreditCard company, Expiry dates, Security code, Cardholder address, Zipcode
+        Behaviors:
+
+    CreditCardCompany:
+        Data:
+        Behaviors: authorize transaction
+
+    Car:
+        Data: Number of seats, Desirable type of Gas, Total gallons of gas, Used gallons of gas
+        Behaviors: add gas
+
+    Gas:
+        Data: Type, Price
+        Behaviors:
+
+    GasStation:
+        Data: Collection of gas, Gas machines
+        Behaviors:
+
+    Restaurant:
+        Date: Collection of food, Price
+        Behaviors:
+
+    Ticket:
+        Date: Valid dates, Price
+        Behaviors:
+
+
+
+    class Driver
+        String driverName,
+        String driversLicenseNumber,
+
+        double drive(double mile),
+        double buyTicket(int numOfGuests),
+    end
+
+    class Visitor
+        String name,
+
+        List<Hotel> searchHotel(HotelCriteria hotelCriteria),
+        boolean makePayment(CreditCard creditCard),
+        void makeReservation(Reservation reservation),
+        double haveLunch(String food),
+        void checkIn(Date date),
+        void checkOut(Date date),
+        void goHiking(),
+        void reviewHotel(String comment),
+    end
+
+    class BookingWebsite
+        String urlOfBooking,
+        List<Hotel> hotels,
+
+        List<Hotel> sort(double price),
+        List<Hotel> display(),
+        List<Hotel> compare(),
+    end
+
+    class Hotel
+        String roomType,
+        double roomPrice,
+        Address hotelAddress,
+        String hotelReview,
+    end
+
+    class HotelCriteria
+        Address desirableLocation,
+        String goodReview,
+    end
+
+    class Reservation
+        String guestName,
+        int numOfGuests,
+        int numOfRooms,
+        String hotelName,
+        double totalPrice,
+        Date checkInDate,
+        Date checkOutDate,
+    end
+
+    class CreditCard
+        String cardHolderName,
+        String cardNumber,
+        String CreditCardCompany,
+    end
+
+    class CreditCardCompany
+        boolean authorizeTransaction(CreditCard creditCard),
+    end
+
+    class Car
+        int numOfSeats,
+        String desirableTypeOfGas,
+        double totalGas,
+        double usedGas,
+
+        double addGas(Gas gas),
+    end
+
+    class Gas
+        String typeOfGas,
+        double gasPrice,
+    end
+
+    class GasStation
+        List<Gas> gas,
+        int gasMachineNum,
+    end
+
+    class Restaurant
+        List<Food> foods,
+        double foodPrice,
+    end
+
+    class Ticket
+        Date validDate,
+        double ticketPrice,
+    end
+
+    class Hiking
+        main
+            Driver alexis,
+            Visitor chloe, alexis -> List<Visitor> visitors,
+            BookingWebsite bookingWebsite,
+            Hotel sheraton,
+            HotelCriteria desirableHotel,
+            Reservation hotelReservation,
+            CreditCard chloeCard,
+            CreditCardCompany visa,
+            Car myCar,
+            Gas premiumGas,
+            GasStation chevron,
+            Restaurant subWay,
+            Ticket parkTicket,
+
+            chloe.searchHotel(desirableHotel),
+                return List<Hotel>
+            bookingWebsite.display(),
+                return List<Hotel>
+            bookingWebsite.sort(price),
+                return List<Hotel>
+            chloe.makeReservation(hotelReservation),
+            if visa.authorizeTransaction(chloeCard),
+                chloe.makePayment(chloeCard),
+            end
+            alexis.drive(mile),
+                return usedGas
+            if usedGas > threshold
+                myCar.addGas(premiumGas),
+                    return gasPrice
+            end
+            visitors.haveLunch(food),
+                return foodPrice
+            alexis.buyTicket(visitors),
+                return ticketPrice
+            chloe.checkIn(date),
+            visitors.goHiking(),
+            chloe.checkOut(date),
+            chloe.reviewHotel(comment),
+        end
+    end
