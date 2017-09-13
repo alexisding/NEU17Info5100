@@ -1,0 +1,141 @@
+2. Organize a Career Fair
+    2.1 Send invitations to companies
+    2.2 Confirm number of companies
+    2.3 Find an adequate site
+    2.4 Recruit volunteers
+    2.5 Send flyers
+    2.6 Arrange site
+    2.7 Career Fair
+
+
+
+Objects:
+
+    Organizer:
+        Data: Name
+        Behaviors: send invitations, confirm, find location, recruit volunteers, design posters
+
+    Company:
+        Data: Name, Industry, Open positions, Phone, Email, Address
+        Behaviors: receive resumes, interview
+
+    Invitation:
+        Data: Career Fair date, location
+        Behaviors:
+
+    Location:
+        Data: Number, Street, City, State, Zip code
+        Behaviors:
+
+    Volunteer:
+        Data: Name, Duties
+        Behaviors: send flyers, arrange site
+
+    Interviewee:
+        Data: Name, Desirable position, Resume, Phone, Email
+        Behaviors: send resume, take interview
+
+    Resume:
+        Data: Educational background, Work experience
+        Behaviors:
+
+    Flyer:
+        Data: Career Fair date, Career Fair location, Companies
+        Behaviors:
+
+
+
+    class Organizer
+        String organizationName,
+
+        void sendInvitation(),
+        boolean confirmAttendance(Company company),
+        List<Company> addConfirmedCompany(Company company),
+        Location findCareerFairLocation(List<Company> companies),
+        int recruitVolunteer(Volunteer volunteer),
+    end
+
+    class Company
+        String companyName,
+        String companyIndustry,
+        String openPosition,
+        String companyPhone,
+        String companyEmail,
+        Address companyAddress,
+
+        void receiveResume(Interviewee interviewee),
+        void interview(Interviewee interviewee),
+    end
+
+    class Invitation
+        Date careerFairDate,
+        Location location,
+    end
+
+    class Location
+        int streetNumber,
+        String street,
+        String city,
+        String state,
+        String zipCode,
+    end
+
+    class Volunteer
+        String volunteerName,
+        String volunteerDuty,
+
+        void sendFlyer(Interviewee interviewee),
+        void arrangeSite(int table, int chair),
+    end
+
+    class Interviewee
+        String intervieweeName,
+        String intervieweePhone,
+        String intervieweeEmail,
+        String desirablePosition,
+        Resume resume,
+
+        void sendResume(Company company),
+        void takeInterview(Company company),
+    end
+
+    class Resume
+        String educationalBackground,
+        String workExperience,
+    end
+
+    class Flyer
+        Date careerFairDate,
+        Location location,
+        List<Company> companies,
+    end
+
+    class OrganizeCareerFair
+        main
+            Organizer neu,
+            Company amazon, google, facebook, -> List<Company> companies,
+            Invitation invitation,
+            Location neuCampus,
+            Volunteer neuVolunteer,
+            Interviewee neuStudent,
+            Resume studentResume,
+            Flyer flyer,
+
+            neu.sendInvitation(),
+            for company in companies
+                if neu.confirmAttendance(company)
+                    neu.addConfirmedCompany(company),
+                end
+            end
+            neu.findCareerFairLocation(companies),
+                return neuCampus
+            neu.recruitVolunteer(neuVolunteer),
+                return numOfVolunteer
+            neuVolunteer.sendFlyer(neuStudent),
+            neuVolunteer.arrangeSite(tables, chairs),
+            neuStudent.sendResume(companies),
+            companies.receiveResume(neuStudent),
+            companies.interview(neuStudent),
+            neuStudent.takeInterview(companies),
+        end
+    end
