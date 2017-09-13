@@ -54,7 +54,7 @@ Objects:
 
     class PizzaHutWebsite
         String urlOfPizzaHut,
-        List<Pizza> pizza,
+        List<Pizza> pizzas,
 
         List<Pizza> sort(double price),
         List<Pizza> display(),
