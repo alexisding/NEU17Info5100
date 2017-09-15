@@ -1,0 +1,136 @@
+4. Code Sharing Platform (Github)
+    4.1 Sign up
+    4.2 Log in
+    4.3 Create user profile
+    4.4 Create repository
+    4.5 Push files to platform
+    4.6 Add contributors
+    4.7 Follow other users
+    4.8 Add comment to other users
+
+Objects:
+
+    User:
+        Data: Name, Username, Password, Email
+        Behaviors: sign up, log in, create profile, create repository, push files, add commit, add contributors, follow, add comments
+
+    Profile:
+        Data: Location, Occupation, Educational background, Repositories
+        Behaviors: open profile
+
+    Repository:
+        Data: Files, Date, Contributors
+        Behaviors: open repository
+
+    Platform:
+        Data: User profiles
+        Behaviors: display
+
+    File:
+        Data: Date, Commit
+        Behaviors:
+
+    Commit:
+        Data: Date, Commit description
+        Behaviors:
+
+    Contributor:
+        Data: Name, User name
+        Behavior: add comments
+
+
+    class User
+        String name,
+        String userName,
+        String password,
+        String email,
+
+        void signUp(String userEmail),
+        boolean logIn(String userName, String password),
+        Profile createProfile(),
+        Repository createRepository(String repositoryName),
+        boolean pushFiles(File file),
+        Commit addCommit(String commitDescription),
+        Contributor addContributor(String userName),
+        void follow(String userName),
+        void addComment(String comment),
+    end
+
+    class Profile
+        String location,
+        String occupation,
+        String educationalBackground,
+        List<Repository> repositories,
+
+        List<Repository> openProfile(),
+    end
+
+    class Repository
+        List<File> files,
+        Date date,
+        List<Contributor> contributors,
+
+        List<File> openRepository(),
+    end
+
+    class Platform
+        List<Profile> profiles,
+
+        List<Profile> display(),
+    end
+
+    class File
+        Date date,
+        Commit commit,
+    end
+
+    class Commit
+        Date date,
+        String commitDescription,
+    end
+
+    class Contributor
+        String name,
+        String userName,
+
+        void addComment(String comment)
+    end
+
+    class CodeSharingPlatform
+        main
+            User alexis,
+            Profile alexisProfile,
+            Repository info5100,
+            Platform gitHub,
+            File assignment,
+            Commit commit1,
+            Contributor chloe,
+
+            alexis.signUp(email),
+            if alexis.logIn(userName, password),
+                alexis.createProfile(),
+                    return alexisProfile
+                Loop
+                    alexis.createRepository(),
+                        return repository
+                end
+                alexisProfile.openProfile(),
+                    return repositories
+                Loop
+                    if alexis.pushFile(assignment),
+                        alexis.addCommit(commitDescription),
+                            return commit
+                        alexis.addContributor(userName),
+                            return contributor
+                    end
+                end
+                chloe.addComment(comment),
+                alexisProfile.openRepository(),
+                    return files
+                alexis.follow(userName),
+                alexis.addComment(comment),
+                gitHub.display(),
+                    return profiles
+            end
+        end
+    end
