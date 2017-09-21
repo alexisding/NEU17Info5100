@@ -37,7 +37,7 @@ public class Solution2 {
 			salary = baseSalary + (hours - baseHours) * rate * 1.5;
 			return salary;
 		} else if (hours > addOnHours && hours <= maxHours) {
-			salary = baseSalary + addOnSalary + (hours - maxHours) * rate * 2.0;
+			salary = baseSalary + addOnSalary + (hours - addOnHours) * rate * 2.0;
 			return salary;
 		} else {
 			return 0.0;
@@ -111,6 +111,7 @@ public class Solution2 {
 		double loyaltyPoints;
 		String pizzaTopping;
 
+		// constructors
 		public Pizza() {
 
 		}
@@ -158,6 +159,7 @@ public class Solution2 {
 		Pizza pepperoni = new Pizza("pepperoni", 5.99);
 		Pizza cheese = new Pizza("cheese", 2.99);
 
+		// use HashMap to record pizza name and number of pizza
 		HashMap<Pizza, Integer> orderedPizzas= new HashMap<>();
 		orderedPizzas.put(hawaiian, 2);
 		orderedPizzas.put(pepperoni, 1);
@@ -165,6 +167,7 @@ public class Solution2 {
 
 		Customer customer = new Customer("Alexis", orderedPizzas);
 
+		// sum up how much money the customer spent
 		double hawaiianPrice = hawaiian.unitPrice * orderedPizzas.get(hawaiian);
 		double pepperoniPrice = pepperoni.unitPrice * orderedPizzas.get(pepperoni);
 		double cheesePrice = cheese.unitPrice * orderedPizzas.get(cheese);
@@ -175,7 +178,7 @@ public class Solution2 {
 		Solution2 solution = new Solution2();
 
 		// test question 1
-		System.out.println(solution.employeeSalary(39.0));
+		System.out.println(solution.employeeSalary(46.0));
 
 		// test question 2
 		System.out.println(solution.addDigits(786));
