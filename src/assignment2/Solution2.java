@@ -1,3 +1,7 @@
+/* Good Work
+ * score = 9.5 + extra credit 3; Total score = 10
+ */
+
 package assignment2;
 
 import com.sun.tools.doclint.Entity;
@@ -19,8 +23,10 @@ public class Solution2 {
 
 	Here is the prototype you can work with
 	*/
-
-	public double employeeSalary(double hours){
+	
+	//score 1.5
+	public double employeeSalary(double hours){ 
+		// for hours greater than 48, your functions should return pay for 48 instead it returns 0
 
 		double salary = 0.0;
 		double rate = 15.0;
@@ -52,7 +58,7 @@ public class Solution2 {
 
 	Here is the prototype you can work with
 	*/
-
+	// score 2
 	public int addDigits(int input){
 
 		if (input <= 0) {
@@ -77,7 +83,7 @@ public class Solution2 {
 
 	Here is the prototype you can work with
 	*/
-
+	// score 2
 	public void printPerfectNumbers(int n){
 
 		if (n >= 6) {
@@ -103,7 +109,7 @@ public class Solution2 {
 	i. Create at least 3 attributes :pizza type , unit price and loyalty points. More attributes are welcome to have.
 	ii. Create constructors . Extra-credit of 0.5 point if you write more than 1 right constructor to this class
 	*/
-
+	// score 2 + extra credit 0.5
 	public static class Pizza {
 
 		String pizzaType;
@@ -140,7 +146,7 @@ public class Solution2 {
               ii. Think about what kind of data structure can be used to record the pizza name and number of each kind of pizza.( Give me your thought, Extra credit of 1 point)
               iii. In main method , sum up how much money the customer spent.
 	 */
-
+	// score 2 + extra credit 1
 	public static class Customer {
 
 		String customerName;
@@ -205,8 +211,8 @@ public class Solution2 {
 
 	   Here is the prototype you can work with
 	 */
-
-	public void printIsoscelesTriangle(int n){
+	// extra credit 2.5
+	public void printIsoscelesTriangle(int n){ // triangle can be formed when n =2
 
 		if (n >= 3) {
 			for (int i = 1; i <= n; i++) {
