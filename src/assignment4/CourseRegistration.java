@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 // Question 4
-class TestCourseRegistration {
+class CourseRegistration {
 
 	public static void main(String[] args) {
 
