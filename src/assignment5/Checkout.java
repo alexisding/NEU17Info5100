@@ -69,7 +69,7 @@ public class Checkout {
 				sb.append('\n' +item.name + String.format("%" + (DessertShoppe.WIDTH - item.name.length()) + "s%n", cost));
 
 			} else if (item instanceof Candy) {
-				String pricePerPound = DessertShoppe.centsToDollarsAndCents(((Candy) item).getPricePerPound());
+				String pricePerPound = DessertShoppe.centsToDollarsAndCents((int)((Candy) item).getPricePerPound());
 				String weight = String.format("%.2f", ((Candy) item).getWeight()); // make weight precised to 0.00
 				sb.append(weight + " lbs. @ " + pricePerPound + " /lb");
 				sb.append('\n' + item.name + String.format("%" + (DessertShoppe.WIDTH - item.name.length()) + "s%n", cost));

@@ -8,7 +8,7 @@ public class DessertShoppe {
 	public static final double TAX_RATE = 0.065;
 	public static final String STORE_NAME = "M & M Dessert Shoppe";
 	public static final int MAX_ITEM_NAME = 20;
-	public static final int WIDTH = 35;
+	public static final int WIDTH = 40;
 
 	public static double getTaxRate() {
 		return TAX_RATE;

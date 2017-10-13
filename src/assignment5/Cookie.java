@@ -26,7 +26,7 @@ public class Cookie extends DessertItem {
 		return pricePerDozen;
 	}
 
-	public void setPricePerDozen(int pricePerDozen) {
+	public void setPricePerDozen(double pricePerDozen) {
 		this.pricePerDozen = pricePerDozen;
 	}
 

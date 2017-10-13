@@ -5,10 +5,10 @@ package assignment5;
  */
 public class Candy extends DessertItem {
 	private double weight;
-	private int pricePerPound;
+	private double pricePerPound;
 	private int cost;
 
-	public Candy(String name, double weight, int pricePerPound) {
+	public Candy(String name, double weight, double pricePerPound) {
 		super(name);
 		this.weight = weight;
 		this.pricePerPound = pricePerPound;
@@ -22,11 +22,11 @@ public class Candy extends DessertItem {
 		this.weight = weight;
 	}
 
-	public int getPricePerPound() {
+	public double getPricePerPound() {
 		return pricePerPound;
 	}
 
-	public void setPricePerPound(int pricePerPound) {
+	public void setPricePerPound(double pricePerPound) {
 		this.pricePerPound = pricePerPound;
 	}
 
