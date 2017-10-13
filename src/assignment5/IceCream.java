@@ -3,6 +3,7 @@ package assignment5;
 /**
  * Created by alexis on 10/9/17.
  */
+
 public class IceCream extends DessertItem {
 	private int cost;
 

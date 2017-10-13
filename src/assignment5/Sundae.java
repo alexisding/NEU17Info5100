@@ -3,6 +3,7 @@ package assignment5;
 /**
  * Created by alexis on 10/9/17.
  */
+
 public class Sundae extends IceCream {
 	private String toppingName;
 	private int toppingCost;

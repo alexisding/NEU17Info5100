@@ -3,6 +3,7 @@ package assignment5;
 /**
  * Created by alexis on 10/9/17.
  */
+
 public class TestCheckOut {
 	public static void main(String[] args) {
 		Checkout checkout = new Checkout();

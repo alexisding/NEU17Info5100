@@ -3,6 +3,7 @@ package assignment5;
 /**
  * Created by alexis on 10/9/17.
  */
+
 public class Cookie extends DessertItem {
 	private int number;
 	private double pricePerDozen;

@@ -3,6 +3,7 @@ package assignment5;
 /**
  * Created by alexis on 10/9/17.
  */
+
 public class Candy extends DessertItem {
 	private double weight;
 	private double pricePerPound;

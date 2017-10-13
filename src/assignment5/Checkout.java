@@ -5,6 +5,7 @@ import java.util.Vector;
 /**
  * Created by alexis on 10/9/17.
  */
+
 public class Checkout {
 
 	private Vector<DessertItem> dessertItems;
