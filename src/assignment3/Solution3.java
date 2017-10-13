@@ -1,3 +1,6 @@
+/* Good Work
+ * score 10 + extra credit 2; total score 10
+ */
 package assignment3;
 
 import java.util.Arrays;
@@ -13,7 +16,7 @@ public class Solution3 {
 	Find the error in the following code and explain in few lines why it is wrong. (Score 1)
 	Here is the code.
 	*/
-	public class Book {
+	public class Book { // score 1
 
 		int size;
 		int price;
@@ -24,7 +27,7 @@ public class Solution3 {
 		}
 
 		public Book(int size, int price, String name) {
-			// there is no parent class for it
+			// there is no parent class for it // parent class is Object class
 			super();
 			this.size = size;
 			this.price = price;
@@ -61,7 +64,7 @@ public class Solution3 {
 	Find the error in the following code and explain in few lines why it is wrong. (Score 1)
 	Here is the code.
 	 */
-	class Clock {
+	class Clock { // score 1
 		String time;
 
 		// If it is a getter method, it should have a return type String instead of void;
@@ -82,7 +85,7 @@ public class Solution3 {
 		ii. Should return the input string after omitting the vowels.
 	Here is the prototype you can work with
 	*/
-	public String removeVowelsFromString(String input) {
+	public String removeVowelsFromString(String input) { // score 2
 
 		StringBuilder sb = new StringBuilder();
 
@@ -119,7 +122,7 @@ public class Solution3 {
 	Here is the prototype you can work with
 	*/
 
-	public boolean checkIfTwoStringsAreAnagrams(String s1, String s2) {
+	public boolean checkIfTwoStringsAreAnagrams(String s1, String s2) { // score 2
 
 		if (s1 == s2 || s1.length() != s2.length() || s1 == null || s2 == null) {
 			return false;
@@ -146,7 +149,7 @@ public class Solution3 {
 		iii. Should be able to convert ‘Fahrenheit-Celsius’ , ‘Feet-Inches’. (Score 1)
 	*/
 
-	static class Calculator {
+	static class Calculator { // score 4 + extra credit 2
 
 		// function i
 		public double add(double a, double b) {
