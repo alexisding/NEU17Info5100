@@ -1,3 +1,6 @@
+/* Good work
+ * score 10 + extra credit 2; Total score 10
+ */
 package assignment4;
 
 /**
@@ -9,7 +12,7 @@ package assignment4;
 public class Solution4 {
 
 	// Question 1
-	public String formatALicenseKey(String s, int k) {
+	public String formatALicenseKey(String s, int k) { // score 2
 		String ls = "";
 		String ss = removeDash(s).toUpperCase();
 		char[] sArr = ss.toCharArray();
@@ -51,7 +54,7 @@ public class Solution4 {
 	}
 
 	// Question5
-	public String intToRoman(int num) {
+	public String intToRoman(int num) { // score 2
 
 		String s = "";
 		if (num >=1 && num <= 3999) {
@@ -68,7 +71,7 @@ public class Solution4 {
 	}
 
 	// Extra Credit
-	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+	public double findMedianSortedArrays(int[] nums1, int[] nums2) { // Extra credit 2
 
 		if ((nums1.length + nums2.length) % 2 == 0) {
 			int k = (nums1.length + nums2.length) / 2;
