@@ -5,7 +5,7 @@ package assignment4;
  */
 
 // Question 2
-class Tool {
+class Tool { // score 2
 
 	protected int strength;
 	protected char type;

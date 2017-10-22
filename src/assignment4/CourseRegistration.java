@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 // Question 4
-class CourseRegistration {
+class CourseRegistration { // score 2
 
 	public static void main(String[] args) {
 
