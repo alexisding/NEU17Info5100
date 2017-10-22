@@ -1,0 +1,4 @@
+Sharon,26,Seattle,phone1,account1,password1
+Rachel,24,SF,phone2,account2,password2
+Dido,28,Boston,phone3,account3,password3
+Sophie,26,NY,phone4,account4,password4
