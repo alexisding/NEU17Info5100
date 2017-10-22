@@ -7,6 +7,7 @@ import java.util.Date;
 /**
  * Created by alexis on 10/21/17.
  */
+
 public class Account {
 
 	public static final double INIT_BALANCE = 0;

@@ -3,6 +3,7 @@ package assignment6;
 /**
  * Created by alexis on 10/16/17.
  */
+
 public class MyIndexOutOfBoundException extends Exception{
 
 	private int lowerBound;

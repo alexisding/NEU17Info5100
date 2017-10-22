@@ -8,6 +8,7 @@ import java.util.Map;
 /**
  * Created by alexis on 10/17/17.
  */
+
 public class Atm {
 	public static final int TRANSACTION_FEE = 5;
 	public static final int INIT_ATM_AMOUNT = 1000;

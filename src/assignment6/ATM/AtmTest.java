@@ -3,9 +3,9 @@ package assignment6.ATM;
 import java.util.*;
 
 /**
- *
  * Created by alexis on 10/19/17.
  */
+
 public class AtmTest {
 
 	public void mainMenu() {

@@ -9,6 +9,7 @@ import static com.sun.tools.doclint.Entity.quot;
 /**
  * Created by alexis on 10/16/17.
  */
+
 public class Question2 {
 
 	public static void parse(File file) {
