@@ -6,7 +6,7 @@ package midterm;
 public class MidTerm {
 
 	// Question 1
-	public int[] reverseEvenIndices(int[] nums){
+	public int[] reverseEvenIndices(int[] nums){ //score 6
 		if (nums == null || nums.length == 0) {
 			return nums;
 		}
@@ -35,7 +35,7 @@ public class MidTerm {
 	}
 
 	// Question 2
-	public int arrangeCoins(int n){
+	public int arrangeCoins(int n){ // score 7
 		long nL = (long) n;
 		long start = 1;
 		long end = nL;
@@ -53,7 +53,7 @@ public class MidTerm {
 	}
 
 	// Question 3
-	public int minMoves(int[] nums){
+	public int minMoves(int[] nums){ // score 7
 		if (nums == null || nums.length <= 1) {
 			return 0;
 		}
@@ -70,10 +70,10 @@ public class MidTerm {
 	}
 
 	// Question 4
-	public int countNumberOfPossibleWays(int m, int n, int x) {
+	public int countNumberOfPossibleWays(int m, int n, int x) { //score 10
 		// assume the least faces a dice can have is 6
 		if (x == 0 || x < n || n == 0 || m < 6) {
-			System.out.println("Error: it's not realistic.");
+			System.out.println("Error: it's not realistic."); // you should not assume that faces is less than 6.
 			return -1;
 		}
 
