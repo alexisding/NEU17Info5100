@@ -1,3 +1,4 @@
+// score 30 + extra credit 10
 package midterm;
 
 import java.util.ArrayList;
