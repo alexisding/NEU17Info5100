@@ -70,7 +70,7 @@ public class MidTerm {
 	}
 
 	// Question 4
-	public int countNumberOfPossibleWays(int m, int n, int x) { //score 10
+	public int countNumberOfPossibleWays(int m, int n, int x) { //score 9
 		// assume the least faces a dice can have is 6
 		if (x == 0 || x < n || n == 0 || m < 6) {
 			System.out.println("Error: it's not realistic."); // you should not assume that faces is less than 6.
