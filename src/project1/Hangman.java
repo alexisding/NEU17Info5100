@@ -1,3 +1,8 @@
+/* Good Work
+ * Score 18
+ * You kept the playGame logic inside main function. The main function should only be used to run the project not handle the logic
+ * didn't print the initial picture
+ */
 package project1;
 
 import java.util.ArrayList;
@@ -10,7 +15,7 @@ import java.util.Scanner;
  */
 public class Hangman {
 
-	public static final int MAX_WRONG_GUESS = 8;
+	public static final int MAX_WRONG_GUESS = 8; // access should be private
 
 	private List<String> words;
 	private List<Character> correctList;
