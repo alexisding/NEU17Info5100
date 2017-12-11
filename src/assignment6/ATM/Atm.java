@@ -1,5 +1,7 @@
+/* Awesome work
+ * SCore 10 + extra credit 2; Total score 10
+*/
 package assignment6.ATM;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
