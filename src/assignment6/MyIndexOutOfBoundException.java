@@ -4,7 +4,7 @@ package assignment6;
  * Created by alexis on 10/16/17.
  */
 
-public class MyIndexOutOfBoundException extends Exception{
+public class MyIndexOutOfBoundException extends Exception{ //score 2
 
 	private int lowerBound;
 	private int upperBound;
