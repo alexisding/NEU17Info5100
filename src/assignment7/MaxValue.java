@@ -5,7 +5,7 @@ package assignment7;
  *
  * Created by alexis on 11/9/17.
  */
-public class MaxValue extends Thread {
+public class MaxValue extends Thread {// score 2
 	private int[] arr;
 	private int max;
 	private int low;
