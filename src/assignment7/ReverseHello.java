@@ -3,7 +3,7 @@ package assignment7;
 /**
  * Created by alexis on 11/12/17.
  */
-public class ReverseHello extends Thread {
+public class ReverseHello extends Thread { // score 2
 	private int count;
 
 	public ReverseHello(int count) {
