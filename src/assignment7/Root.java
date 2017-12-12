@@ -3,7 +3,7 @@ package assignment7;
 /**
  * Created by alexis on 11/12/17.
  */
-public class Root {
+public class Root { //score 2
 	public static void main(String[] args) {
 		Device device = new Device();
 		Sensor heat = new Sensor(device);
