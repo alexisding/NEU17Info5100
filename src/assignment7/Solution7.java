@@ -1,3 +1,6 @@
+/* Good work
+ * score 10 + extra credit 2; Total score 10
+ */
 package assignment7;
 
 import java.util.ArrayList;
@@ -9,7 +12,7 @@ import java.util.List;
 public class Solution7 {
 
 	// Question 4
-	public void printPascalTriangle(int n) {
+	public void printPascalTriangle(int n) { // score 2
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 
 		if (n <= 0) {
@@ -40,7 +43,7 @@ public class Solution7 {
 	}
 
 	// Extra Credit
-	public boolean findPartition(int[] arr) {
+	public boolean findPartition(int[] arr) { // score 2
 		if (arr == null || arr.length == 0) {
 			return false;
 		}
