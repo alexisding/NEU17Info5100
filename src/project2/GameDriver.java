@@ -1,3 +1,8 @@
+/* Good WOrk
+ * SCore 19
+ * Your setShortest method should set diamonds as shortest if they are lessthan or equal to clubs but it sets clubs as shortest
+if they are equal
+ */
 package project2;
 
 import java.util.Scanner;
