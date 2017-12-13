@@ -9,7 +9,7 @@ import java.util.*;
 /**
  * Created by alexis on 11/19/17.
  */
-public class LyricAnalyzer {
+public class LyricAnalyzer { // score 4
 
 	private static final int NEGATIVE = -1;
 	private HashMap<String, ArrayList<Integer>> map;
