@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by alexis on 11/19/17.
  */
-public class FileCounter {
+public class FileCounter { // score 3
 	private int characterCount, wordCount, lineCount;
 
 	public FileCounter() {
